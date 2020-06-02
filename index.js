@@ -4,6 +4,9 @@ const router = express.Router();
 const app = express();
 app.set("view engine", "ejs");
 
+// Express body parser
+app.use(express.urlencoded({ extended: true }));
+
 // Routes
 const home = require("./router");
 app.use("/", home);
